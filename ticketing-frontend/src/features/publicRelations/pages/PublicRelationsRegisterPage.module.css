@@ -1,0 +1,80 @@
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 22px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.input {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 11px 12px;
+  font: inherit;
+}
+
+.checkLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  line-height: 1.4;
+}
+
+.resultBox {
+  display: grid;
+  gap: 12px;
+}
+
+.resultBox h3 {
+  margin: 0;
+}
+
+.resultBox code {
+  display: block;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.secondaryLink {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    padding: 16px;
+  }
+}

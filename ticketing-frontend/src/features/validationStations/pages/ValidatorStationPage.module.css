@@ -1,0 +1,200 @@
+.page,
+.scannerPage {
+  min-height: 100vh;
+  background: var(--color-background);
+  padding: 20px;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+}
+
+.panel {
+  width: min(460px, 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  padding: 22px;
+}
+
+.eyebrow {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.title,
+.scannerTitle {
+  margin: 0;
+}
+
+.text {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.form,
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.input {
+  border: 1px solid var(--color-primary-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.secondaryLink {
+  color: var(--color-primary-strong);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.scannerPage {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+}
+
+.scannerHeader {
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.scannerHeader .eyebrow {
+  color: var(--color-primary-border);
+}
+
+.stationMeta {
+  margin: 6px 0 0;
+}
+
+.scannerBody {
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.readerFrame,
+.manualForm {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  padding: 14px;
+}
+
+.incidentBox {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  margin-top: 14px;
+  padding: 12px 14px;
+}
+
+.incidentBox summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.incidentForm {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.incidentMsg {
+  color: var(--color-primary-strong);
+  margin: 0;
+}
+
+.reader {
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.reader video {
+  border-radius: 6px;
+}
+
+.cameraAction {
+  display: block;
+  margin: 12px auto 0;
+}
+
+.manualForm {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.successResult,
+.errorResult {
+  border-radius: 8px;
+  color: var(--color-on-primary);
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.successResult {
+  background: var(--color-success);
+}
+
+.errorResult {
+  background: var(--color-danger);
+}
+
+.successResult h2,
+.errorResult h2,
+.successResult p,
+.errorResult p {
+  margin: 0;
+}
+
+.resultSymbol {
+  border: 3px solid currentColor;
+  border-radius: 999px;
+  display: grid;
+  font-size: 22px;
+  font-weight: 700;
+  height: 58px;
+  margin: 0 auto;
+  place-items: center;
+  width: 58px;
+}
+
+.ticketResultMeta {
+  display: grid;
+  gap: 4px;
+}
+
+.resultAction {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .page,
+  .scannerPage {
+    padding: 12px;
+  }
+
+  .scannerHeader {
+    display: grid;
+  }
+
+  .reader {
+    min-height: 250px;
+  }
+}

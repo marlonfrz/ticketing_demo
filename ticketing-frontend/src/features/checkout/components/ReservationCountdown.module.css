@@ -1,0 +1,9 @@
+.text {
+  margin: 0 0 16px 0;
+}
+
+.warning {
+  margin: 0 0 16px 0;
+  color: var(--color-warning);
+  font-weight: 600;
+}

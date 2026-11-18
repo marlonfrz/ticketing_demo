@@ -1,0 +1,125 @@
+.dropdown {
+  position: relative;
+}
+
+.trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 11px;
+  position: relative;
+  transition: background-color 160ms ease, color 160ms ease;
+  white-space: nowrap;
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+}
+
+.activeTrigger {
+  color: var(--color-primary-strong);
+}
+
+.activeTrigger::after {
+  background: var(--color-primary);
+  border-radius: 999px;
+  bottom: 1px;
+  content: "";
+  height: 2px;
+  left: 11px;
+  position: absolute;
+  right: 11px;
+}
+
+.chevron {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 160ms ease;
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.menu {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  left: 0;
+  min-width: 220px;
+  padding: 6px;
+  position: absolute;
+  top: calc(100% + 7px);
+  z-index: 120;
+}
+
+.menuItem {
+  align-items: center;
+  border-radius: 6px;
+  color: var(--color-text);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 12px;
+  justify-content: space-between;
+  min-height: 38px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.menuItem:hover,
+.activeItem {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+}
+
+.badge {
+  align-items: center;
+  background: var(--color-danger);
+  border-radius: 999px;
+  color: var(--color-on-primary);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  min-width: 20px;
+  padding: 0 6px;
+}
+
+@media (max-width: 820px) {
+  .trigger {
+    min-height: 36px;
+    padding-block: 7px;
+  }
+
+  .menu {
+    left: 12px;
+    min-width: 0;
+    position: fixed;
+    right: 12px;
+    top: 99px;
+  }
+}
+
+@media (max-width: 420px) {
+  .trigger {
+    font-size: 13px;
+    gap: 4px;
+    padding-inline: 8px;
+  }
+}

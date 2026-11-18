@@ -1,0 +1,17 @@
+.content {
+  display: grid;
+  gap: 18px;
+}
+
+.message {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}

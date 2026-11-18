@@ -1,0 +1,53 @@
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  padding: 16px;
+}
+
+.info p,
+.title {
+  margin: 0 0 7px;
+}
+
+.reviewForm,
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.input,
+.textarea {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+
+.textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+@media (max-width: 700px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}

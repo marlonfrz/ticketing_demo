@@ -1,0 +1,140 @@
+.layout {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 1.15fr);
+}
+
+.introduction {
+  align-content: start;
+  display: grid;
+  gap: 24px;
+}
+
+.lead {
+  color: var(--color-text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.steps {
+  border-left: 3px solid var(--color-primary);
+  display: grid;
+  gap: 14px;
+  padding-left: 18px;
+}
+
+.steps p,
+.contactAlternative {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.steps strong {
+  color: var(--color-primary-strong);
+  margin-right: 6px;
+}
+
+.contactAlternative {
+  color: var(--color-text-muted);
+}
+
+.contactAlternative a {
+  color: var(--color-primary-strong);
+  font-weight: 700;
+}
+
+.form {
+  border-left: 1px solid var(--color-border);
+  display: grid;
+  gap: 18px;
+  padding-left: 36px;
+}
+
+.fieldGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field small {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-control);
+  padding: 11px 12px;
+  resize: vertical;
+  width: 100%;
+}
+
+.honeypot {
+  height: 0;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error,
+.success {
+  border: 1px solid;
+  border-radius: var(--radius-control);
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.error {
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger-border);
+  color: var(--color-danger-strong);
+}
+
+.success {
+  background: var(--color-success-soft);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+@media (max-width: 760px) {
+  .layout {
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+    padding-left: 0;
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+.backLink {
+  color: var(--color-primary-strong);
+  display: inline-flex;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: var(--color-danger);
+}

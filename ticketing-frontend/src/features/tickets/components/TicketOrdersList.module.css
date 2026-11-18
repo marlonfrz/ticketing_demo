@@ -1,0 +1,258 @@
+.ordersList {
+  display: grid;
+  gap: 14px;
+}
+
+.orderCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+
+.orderCard[open] {
+  border-color: var(--color-primary-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.orderSummary {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  list-style: none;
+  padding: 16px;
+  transition: background-color 160ms ease;
+}
+
+.orderSummary::-webkit-details-marker {
+  display: none;
+}
+
+.orderSummary:hover,
+.orderCard[open] .orderSummary {
+  background: var(--color-primary-soft);
+}
+
+.orderSummary:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: -3px;
+}
+
+.summaryMain {
+  min-width: 0;
+}
+
+.orderTitle {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.summaryAside {
+  align-items: center;
+  column-gap: 16px;
+  display: grid;
+  grid-template-columns: auto auto 20px;
+  text-align: right;
+}
+
+.summaryAside strong {
+  align-items: center;
+  color: var(--color-primary-strong);
+  display: inline-flex;
+  height: 26px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ticketCount {
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary-border);
+  border-radius: 999px;
+  color: var(--color-primary-strong);
+  align-items: center;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  height: 26px;
+  justify-content: center;
+  line-height: normal;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.chevron {
+  align-items: center;
+  display: inline-flex;
+  height: 26px;
+  justify-content: center;
+  width: 20px;
+}
+
+.chevron::before {
+  border-bottom: 2px solid var(--color-primary-strong);
+  border-right: 2px solid var(--color-primary-strong);
+  content: "";
+  height: 8px;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 160ms ease;
+  width: 8px;
+}
+
+.orderCard[open] .chevron::before {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.orderDetails {
+  border-top: 1px solid var(--color-primary-border);
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.detailHeader {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.detailHeader h3,
+.detailHeader p {
+  margin: 0;
+}
+
+.detailHeader h3 {
+  font-size: 16px;
+}
+
+.detailHeader p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.ticketList {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ticketItem {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-control);
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+}
+
+.ticketHeading {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.validStatus,
+.neutralStatus {
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 7px;
+  white-space: nowrap;
+}
+
+.validStatus {
+  background: var(--color-success-soft);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+.neutralStatus {
+  background: var(--color-surface-muted);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+
+.ticketData {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.ticketData div {
+  display: grid;
+  gap: 3px;
+}
+
+.ticketData dt {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.ticketData dd {
+  font-weight: 650;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.downloadButton {
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--color-text-muted);
+  margin: 4px 0;
+}
+
+@media (max-width: 640px) {
+  .orderSummary {
+    align-items: start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .summaryAside {
+    column-gap: 12px;
+  }
+
+  .ticketCount {
+    white-space: normal;
+  }
+
+  .orderDetails {
+    padding: 14px;
+  }
+
+  .detailHeader {
+    align-items: stretch;
+    display: grid;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .orderSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryAside {
+    grid-template-columns: auto auto minmax(20px, 1fr);
+    justify-content: start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .chevron {
+    justify-self: end;
+    margin-right: 5px;
+  }
+}

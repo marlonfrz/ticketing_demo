@@ -1,0 +1,19 @@
+.error {
+  color: var(--color-danger);
+  margin-top: 12px;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .actions,
+  .actions > * {
+    width: 100%;
+  }
+}

@@ -1,0 +1,132 @@
+.header {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.stationName {
+  margin: 0 0 8px;
+}
+
+.header p {
+  color: var(--color-text-muted);
+  margin: 4px 0 0;
+}
+
+.summary {
+  border: 1px solid var(--color-primary-border);
+  border-radius: 8px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  display: grid;
+  gap: 4px;
+  min-width: 150px;
+  padding: 12px;
+  text-align: right;
+}
+
+.summary strong {
+  font-size: 28px;
+}
+
+.backLink {
+  color: var(--color-primary-strong);
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.filters {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(220px, 1fr) auto auto;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.input {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.filterAction {
+  align-self: end;
+}
+
+.activityList {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.activityRow {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.activityRow > div {
+  display: grid;
+  gap: 4px;
+}
+
+.activityRow span,
+.activityRow small,
+.empty {
+  color: var(--color-text-muted);
+}
+
+.activityMeta {
+  text-align: right;
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+@media (max-width: 720px) {
+  .header,
+  .activityRow {
+    display: grid;
+  }
+
+  .summary,
+  .activityMeta {
+    text-align: left;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .pagination {
+    justify-content: stretch;
+  }
+}

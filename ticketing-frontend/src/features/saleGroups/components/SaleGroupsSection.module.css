@@ -1,0 +1,38 @@
+.wrapper {
+  margin-top: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: var(--color-text-muted);
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.warning {
+  color: var(--color-warning);
+  background: var(--color-warning-soft);
+  border: 1px solid var(--color-warning-border);
+  padding: 10px 12px;
+  border-radius: 8px;
+}

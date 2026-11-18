@@ -1,0 +1,43 @@
+.menuContainer {
+  position: relative;
+}
+
+.menuTrigger {
+  padding: 4px;
+}
+
+.menu {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  min-width: 170px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 10;
+}
+
+.menuItem {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 9px 10px;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: var(--color-surface-subtle);
+}
+
+.menuItem:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.dangerItem {
+  color: var(--color-danger-strong);
+}

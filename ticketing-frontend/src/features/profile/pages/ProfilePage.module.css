@@ -1,0 +1,165 @@
+.profile {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.75fr);
+}
+
+.identity {
+  align-items: center;
+  background: var(--color-primary-soft);
+  border-left: 4px solid var(--color-primary);
+  display: flex;
+  gap: 16px;
+  grid-column: 1 / -1;
+  padding: 18px;
+}
+
+.avatar {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-on-primary);
+  display: inline-flex;
+  flex: 0 0 48px;
+  font-size: 20px;
+  font-weight: 800;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.identity h2,
+.identity p,
+.section h2,
+.securityCopy h2,
+.securityCopy p {
+  margin: 0;
+}
+
+.identity h2 {
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.identity p {
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.section {
+  display: grid;
+  gap: 14px;
+}
+
+.section h2,
+.securityCopy h2 {
+  font-size: 18px;
+}
+
+.dataList {
+  border-bottom: 1px solid var(--color-border);
+  margin: 0;
+}
+
+.dataList div {
+  align-items: baseline;
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 130px minmax(0, 1fr);
+  padding: 13px 2px;
+}
+
+.dataList dt {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dataList dd {
+  font-weight: 650;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.securitySection {
+  align-content: start;
+  background: var(--color-surface-subtle);
+  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  gap: 20px;
+  padding: 16px;
+}
+
+.securityCopy {
+  display: grid;
+  gap: 5px;
+}
+
+.securityCopy p {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.button {
+  white-space: nowrap;
+}
+
+.successMessage,
+.errorMessage {
+  border: 1px solid;
+  border-radius: var(--radius-control);
+  grid-column: 2;
+  margin: -12px 0 0;
+  padding: 10px 12px;
+}
+
+.successMessage {
+  background: var(--color-success-soft);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+.errorMessage {
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger-border);
+  color: var(--color-danger-strong);
+}
+
+@media (max-width: 820px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .identity,
+  .successMessage,
+  .errorMessage {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile {
+    gap: 22px;
+  }
+
+  .identity {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .dataList div {
+    gap: 4px;
+    grid-template-columns: 1fr;
+  }
+
+  .securitySection {
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

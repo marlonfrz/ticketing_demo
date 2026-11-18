@@ -1,0 +1,55 @@
+.wrapper {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.title {
+  margin: 0 0 8px 0;
+}
+
+.help {
+  margin: 0 0 16px 0;
+  color: var(--color-text-muted);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.column {
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-panel);
+  padding: 12px;
+  background: var(--color-surface-subtle);
+  min-height: 160px;
+}
+
+.columnTitle {
+  margin: 0 0 8px 0;
+}
+
+.ticketList {
+  display: grid;
+  gap: 8px;
+}
+
+.ticket {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--color-surface);
+}
+
+.ticketMeta {
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.empty {
+  color: var(--color-text-disabled);
+  font-size: 14px;
+}

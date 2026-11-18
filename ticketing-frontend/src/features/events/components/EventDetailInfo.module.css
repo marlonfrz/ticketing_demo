@@ -1,0 +1,192 @@
+.box {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  padding: 20px;
+  background: var(--color-surface);
+}
+
+.summaryHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.eventImage {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-panel);
+  display: block;
+  flex: 0 0 250px;
+  height: auto;
+  max-width: 250px;
+  object-fit: cover;
+  width: 250px;
+}
+
+.summaryContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.footerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.text {
+  margin: 0 0 10px 0;
+}
+
+.addressLink {
+  color: var(--color-primary-strong);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.addressLink:hover {
+  text-decoration: underline;
+}
+
+.description {
+  margin: 0 0 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.promoterFinance,
+.managementInfo {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.infoItem {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.infoItem span {
+  color: var(--color-text);
+}
+
+.adminBox {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.adminHeader {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.adminTitle {
+  margin: 0;
+}
+
+.adminActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.feeForm {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0 16px 0;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.input {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+}
+
+.financeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.metric {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.metricLabel {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.inviteSummary {
+  margin: 4px 0 14px;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .summaryHeader {
+    display: grid;
+  }
+
+  .titleRow {
+    align-items: flex-start;
+  }
+
+  .eventImage {
+    flex-basis: auto;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .adminHeader {
+    align-items: stretch;
+    display: grid;
+  }
+
+  .adminActions {
+    justify-content: stretch;
+  }
+}

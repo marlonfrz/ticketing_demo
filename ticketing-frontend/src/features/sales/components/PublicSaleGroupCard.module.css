@@ -1,0 +1,24 @@
+.group {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-panel);
+  padding: 16px;
+  background: var(--color-surface-subtle);
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.title {
+  margin: 0 0 4px 0;
+}
+
+.strategy {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}

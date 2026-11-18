@@ -1,0 +1,80 @@
+.content {
+  display: grid;
+  gap: 16px;
+}
+
+.content p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.input {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 11px 12px;
+}
+
+.checkField {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  line-height: 1.45;
+}
+
+.checkField input {
+  flex: 0 0 auto;
+  margin-top: 4px;
+}
+
+.checkField a {
+  color: var(--color-primary-strong);
+}
+
+.contactSummary {
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.textAction {
+  justify-self: start;
+  min-height: auto;
+  padding-inline: 0;
+  text-decoration: underline;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+@media (max-width: 640px) {
+  .actions,
+  .actions > * {
+    width: 100%;
+  }
+}

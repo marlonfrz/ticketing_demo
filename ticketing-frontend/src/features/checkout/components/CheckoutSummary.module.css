@@ -1,0 +1,32 @@
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  padding: 16px;
+  background: var(--color-surface);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 18px;
+}

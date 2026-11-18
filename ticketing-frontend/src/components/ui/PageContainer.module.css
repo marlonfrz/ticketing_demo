@@ -1,0 +1,36 @@
+.wrapper {
+  background: var(--color-background);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding: 12px;
+  }
+
+  .card {
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+}

@@ -1,0 +1,98 @@
+.summary {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  background: var(--color-surface);
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--color-surface);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0 0 8px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  padding: 4px 9px;
+}
+
+.text {
+  margin: 0 0 6px 0;
+}
+
+.promoterBox {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 3px;
+  margin: 10px 0;
+  padding: 10px 12px;
+}
+
+.promoterLabel {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.reasonField {
+  display: grid;
+  flex-basis: 100%;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  min-width: 130px;
+}
+
+.reasonInput {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  font: inherit;
+  min-height: 78px;
+  padding: 9px 10px;
+  resize: vertical;
+  width: min(420px, 100%);
+}
+
+.error {
+  color: var(--color-danger);
+}

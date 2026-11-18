@@ -1,0 +1,28 @@
+.iconButton {
+  flex: 0 0 auto;
+}
+
+.iconButton.small {
+  height: 36px;
+  padding: 0;
+  width: 36px;
+}
+
+.iconButton.medium {
+  height: 42px;
+  padding: 0;
+  width: 42px;
+}
+
+.iconButton.overlay {
+  background: rgb(24 24 27 / 76%);
+  border-color: rgb(255 255 255 / 28%);
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.iconButton.overlay:hover:not(:disabled) {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}

@@ -1,0 +1,155 @@
+.wrapper {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.title {
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.sessionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.sessionCard {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-surface);
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  text-align: left;
+}
+
+.cardHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.cardContentButton {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  gap: 5px;
+  padding: 0;
+  text-align: left;
+}
+
+.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary) inset;
+}
+
+.finishedSession {
+  background: var(--color-surface-subtle);
+  opacity: 0.72;
+}
+
+.finishedSession .cardContentButton {
+  cursor: default;
+}
+
+.sessionCard small,
+.sessionCard em,
+.metaLine {
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+.cardReviewAction {
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.cardReviewAction span {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.cardReviewButtons {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.cancelReviewForm {
+  display: grid;
+  gap: 14px;
+}
+
+.cancelReviewField {
+  display: grid;
+  gap: 6px;
+}
+
+.cancelReviewInput {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  min-height: 110px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.cancelReviewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 980px) {
+  .sessionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .sessionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardReviewAction {
+    align-items: stretch;
+    display: grid;
+  }
+
+  .cardReviewButtons {
+    display: grid;
+  }
+
+  .cancelReviewActions {
+    display: grid;
+  }
+}
